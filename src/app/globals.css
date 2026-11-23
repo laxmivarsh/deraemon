@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dora-blue: #008CD7;
+  --dora-sky: #38BDF8;
+  --dora-deep: #0B2545;
+  --dora-red: #EE3B3B;
+  --dora-yellow: #FFD200;
+  --dora-cream: #FAF8F5;
+  --dora-navy: #081B33;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #081B33;
+    color: #F8FAFC;
+    overflow-x: hidden;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    min-height: 100vh;
+  }
+
+  /* Custom Doraemon-themed Anime Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0B2545;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #008CD7 0%, #38BDF8 50%, #FFD200 100%);
+    border-radius: 9999px;
+    border: 2px solid #081B33;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FFD200;
+  }
+}
+
+/* Glassmorphism & Anime Panels */
+.dora-glass {
+  background: rgba(11, 37, 69, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.dora-glass-bright {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.dora-card-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dora-card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 35px -10px rgba(0, 140, 215, 0.45);
+  border-color: rgba(56, 189, 248, 0.6);
+}
+
+/* 3D Perspective Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Animated Clouds Horizon */
+.animated-cloud {
+  position: absolute;
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.15));
+  pointer-events: none;
+}
+
+/* Anime Bell Glow */
+.bell-glow {
+  filter: drop-shadow(0 0 16px rgba(255, 210, 0, 0.8));
+}
